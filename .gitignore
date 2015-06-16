@@ -1,0 +1,19 @@
+*.class
+
+# Package Files #
+*.war
+*.ear
+*.class
+.classpath
+.project
+.DS_Store
+Thumbs.db
+db.properties
+.settings/
+classes/
+icon/
+work/
+image/
+work/
+tmp/
+/target/
