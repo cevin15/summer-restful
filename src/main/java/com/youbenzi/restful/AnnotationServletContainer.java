@@ -1,4 +1,4 @@
-package cn._5iurl.restful;
+package com.youbenzi.restful;
 
 import java.io.File;
 import java.net.URL;
@@ -40,7 +40,7 @@ public class AnnotationServletContainer implements ServletContainer {
 
 	public String[] getParamsInUri(String uri){
 		SummerServletBean servletBean = servlets.get(uri);
-		if(servletBean!=null){
+		if(servletBean!=null){		//全匹配拿到bean，说明uri中不包含通配符，就不会有任何参数在uri中了。
 			return new String[]{};
 		}
 		for (String uriInMap : servlets.keySet()) {
@@ -85,6 +85,7 @@ public class AnnotationServletContainer implements ServletContainer {
 				}
 			}
 		}else{
+			System.out.println("[ERROR] "+servletPackage + " 不是正确的包名");
 			throw new RuntimeException(servletPackage + " 不是正确的包名");
 		}
 		for (String clazzName : servletClasses) {

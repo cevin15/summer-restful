@@ -1,4 +1,4 @@
-package cn._5iurl.restful;
+package com.youbenzi.restful;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -15,4 +15,5 @@ public @interface SummerServlet {
 
 	String name() default "";
 	String[] urlPatterns() default {};
+	WebInitParam[] initParams() default {};
 }

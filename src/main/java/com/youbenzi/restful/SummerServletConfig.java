@@ -1,4 +1,4 @@
-package cn._5iurl.restful;
+package com.youbenzi.restful;
 
 import java.util.Enumeration;
 import java.util.Map;
