@@ -39,7 +39,7 @@ public class SummerFilter implements Filter{
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest httpReq = (HttpServletRequest)request;
-		String uri = httpReq.getServletPath();
+		String uri = httpReq.getRequestURI();
 		SummerServletBean servletBean = servletContainer.getServlet(uri);
 		if(servletBean==null){
 			chain.doFilter(request, response);
