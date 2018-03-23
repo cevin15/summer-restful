@@ -55,7 +55,11 @@ public class SummerFilter implements Filter{
 				String p = params[i];
 				request.setAttribute("p"+i, p);
 			}
-			servlet.service(request, response);
+			try {
+				servlet.service(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
